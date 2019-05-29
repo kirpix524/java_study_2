@@ -1,5 +1,5 @@
 import javax.swing.*;
-        import java.awt.*;
+import java.awt.*;
 
 public class GameCanvas extends JPanel {
     private final MainWindow mainWindow;
@@ -16,7 +16,7 @@ public class GameCanvas extends JPanel {
         //
         long currentTime = System.nanoTime();
         float deltaTime = (currentTime - lastFrameTime) * 0.000000001f;
-        mainWindow.onDrawFrame(this, g,deltaTime);
+        mainWindow.onDrawFrame(this, g, deltaTime);
         try {
             Thread.sleep(17);
         } catch (InterruptedException e) {
@@ -24,5 +24,21 @@ public class GameCanvas extends JPanel {
         }
         repaint();
         lastFrameTime = currentTime;
+    }
+
+    int getLeft() {
+        return 0;
+    }
+
+    int getTop() {
+        return 0;
+    }
+
+    int getRight() {
+        return getWidth() - 1;
+    }
+
+    int getBottom() {
+        return getHeight() - 1;
     }
 }

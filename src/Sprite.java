@@ -6,6 +6,9 @@ public class Sprite {
     float halfWidth;
     float halfHeight;
 
+    public Sprite() {
+        super();
+    }
     public Sprite(float x, float y, float halfWidth, float halfHeight) {
         this.x = x;
         this.y = y;
@@ -58,6 +61,6 @@ public class Sprite {
     }
 
     void render(GameCanvas gameCanvas, Graphics g) {
-        
+
     }
 }
